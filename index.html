@@ -150,9 +150,17 @@
 									<i title="Download PDF From GitHub" class="far fa-file-pdf fa-3x"></i>
 								</a>
 							
+							
+
+								<a v-if='item.lessonNumber >= showGitHubLinkAfter' target='_blank' :href='item.zipLink' style='color:black'>
+									<i title="Download Repo Zip" class="fas fa-download fa-3x"></i>
+								</a>
+
 								<a target='_blank' v-if='showPPTX' :href='item.pptxLink' style='color:black'>
 									<i title="Download PPTX From GitHub" class="far fa-file-powerpoint fa-3x"></i>
 								</a>
+
+								
 							</div>
 								
 						</li>

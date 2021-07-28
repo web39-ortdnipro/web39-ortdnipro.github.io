@@ -42,8 +42,6 @@
             let titleTag = document.querySelector('title');
             let appDataTag = document.querySelector('title + meta');
             
-            console.dir( appDataTag.dataset);
-
             let dataConfig = {
 
                 repositoriesList: [],
@@ -95,7 +93,8 @@
                 lessonNumber:   +item.name.trim().toLowerCase().replace('lesson', ''),
                 url:            item.clone_url,
                 pdfLink:        `${item.html_url}/raw/${item.default_branch}/${item.name}.pdf`,
-                pptxLink:       `${item.html_url}/raw/${item.default_branch}/${item.name}.pptx`
+                pptxLink:       `${item.html_url}/raw/${item.default_branch}/${item.name}.pptx`,
+                zipLink:        `${item.html_url}/archive/${item.default_branch}.zip`
             })).sort( (a, b) => b.lessonNumber - a.lessonNumber );
             
         }
